@@ -22,9 +22,6 @@ public class Leerdoel {
 
     private String soort;
 
-    public void setTrainee(Trainee trainee) {
-    }
-
     @ManyToOne
     @JoinColumn(name = "certificaatId")
     private Certificaat certificaat;
@@ -77,12 +74,12 @@ public class Leerdoel {
         this.soort = soort;
     }
 
-    @OneToMany
+    @ManyToMany
     @JsonBackReference
     public List<Trainee> trainees = new ArrayList<>();
 
-    public void addTrainee(Trainee trainee) {
-        this.trainees.add(trainee);
+    public void addTrainee(Trainee t){
+        this.trainees.add(t);
     }
 
 

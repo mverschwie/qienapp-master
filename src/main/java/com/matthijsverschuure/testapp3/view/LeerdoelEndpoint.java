@@ -1,8 +1,10 @@
 package com.matthijsverschuure.testapp3.view;
 
 
+import com.matthijsverschuure.testapp3.controller.CertificaatService;
 import com.matthijsverschuure.testapp3.controller.LeerdoelService;
 import com.matthijsverschuure.testapp3.controller.TraineeService;
+import com.matthijsverschuure.testapp3.model.Certificaat;
 import com.matthijsverschuure.testapp3.model.Leerdoel;
 import com.matthijsverschuure.testapp3.model.Trainee;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,9 @@ import java.util.NoSuchElementException;
 public class LeerdoelEndpoint {
     @Autowired
     LeerdoelService leerdoelService;
+
+    @Autowired
+    CertificaatService certificaatService;
 
     @GetMapping("/all")
     public Iterable<Leerdoel> haalAlleLeerdoelen() {
