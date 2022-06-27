@@ -33,6 +33,8 @@ public class LeerdoelService {
         return null;
     }
 
+
+
     public void koppelCertificaat(Long leerdoelId, Long certificaatId) {
         Leerdoel leerdoel = leerdoelRepository.findById(leerdoelId).get();
         Certificaat certificaat = certificaatRepository.findById(certificaatId).get();
@@ -50,9 +52,8 @@ public class LeerdoelService {
         trainee.addLeerdoel(leerdoel);
         leerdoelRepository.save(leerdoel);
 
-//        System.out.println("Leerdoel gekoppeld aan trainee.");
+        System.out.println("Leerdoel gekoppeld aan trainee.");
     }
-
 
 
 }

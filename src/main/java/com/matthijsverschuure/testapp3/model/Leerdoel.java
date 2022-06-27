@@ -74,6 +74,10 @@ public class Leerdoel {
         this.soort = soort;
     }
 
+    public enum Soort {
+        HARDSKILL, SOFTSKILL
+    }
+
     @ManyToMany
     @JsonBackReference
     public List<Trainee> trainees = new ArrayList<>();
