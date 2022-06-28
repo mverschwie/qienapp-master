@@ -1,6 +1,7 @@
 package com.matthijsverschuure.testapp3.view;
 
 import com.matthijsverschuure.testapp3.controller.TraineeService;
+import com.matthijsverschuure.testapp3.model.HrMedewerker;
 import com.matthijsverschuure.testapp3.model.Trainee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -49,6 +50,10 @@ public class TraineeEndpoint {
     @PostMapping("/{traineeId}/hrmedewerker/{hrMedewerkerId}")
     public void koppelhrMedewerker(@PathVariable(value = "traineeId") long traineeId, @PathVariable(value = "hrMedewerkerId") long hrMedewerkerId) {
         traineeService.koppelHrMedewerker(traineeId, hrMedewerkerId);
+
+        //TODO Exception voor als traineeId of hrMedewerkerId niet bestaat.
+
+
     }
 
 

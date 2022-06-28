@@ -15,17 +15,10 @@ public class User {
 
     public long id;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "adres_id", referencedColumnName = "id")
-//    private Adres adres; // public?
-
-
 
     private String rol;
     private String voornaam;
     private String achternaam;
-    private String email;
-    private String wachtwoord;
     private String straatEnHuisnummer;
     private String postcode;
     private String woonplaats;
@@ -78,19 +71,4 @@ public class User {
         this.achternaam = achternaam;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    private String getWachtwoord() {
-        return wachtwoord;
-    }
-
-    private void setWachtwoord(String wachtwoord) {
-        this.wachtwoord = wachtwoord;
-    }
 }

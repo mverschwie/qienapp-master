@@ -43,6 +43,7 @@ public class LeerdoelService {
         leerdoelRepository.save(leerdoel);
 
         System.out.println("Certificaat gekoppeld aan leerdoel.");
+
     }
 
     public void koppelLeerdoel(Long leerdoelId, Long traineeId) {
