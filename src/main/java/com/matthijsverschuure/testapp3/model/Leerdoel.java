@@ -24,6 +24,11 @@ public class Leerdoel {
 
     @ManyToOne
     @JoinColumn(name = "certificaatId")
+//    public List<Certificaat> certificaten = new ArrayList<>();
+//    public void addCertificaat(Certificaat c){
+//        this.certificaten.add(c);
+//    }
+
     private Certificaat certificaat;
 
     public Certificaat getCertificaat() {
@@ -74,9 +79,9 @@ public class Leerdoel {
         this.soort = soort;
     }
 
-    public enum Soort {
-        HARDSKILL, SOFTSKILL
-    }
+//    public enum Soort {
+//        HARDSKILL, SOFTSKILL
+//    }
 
     @ManyToMany
     @JsonBackReference

@@ -25,11 +25,11 @@ public class HrMedewerkerEndpoint {
 
     @GetMapping("/{id}")
     public HrMedewerker haalHrMedewerkerBijId(@PathVariable (value = "id")long id) {
-        HrMedewerker hrMedewerker = haalHrMedewerkerBijId(id);
-        if (hrMedewerker == null) {
-            throw new NoSuchElementException("Hr-Medewerker bestaat niet in de database.");
-        }
-        return hrMedewerker;
+            HrMedewerker hrMedewerker = hrMedewerkerService.haalHrMedewerkerBijId(id);
+            if (hrMedewerker == null) {
+                throw new NoSuchElementException("Hr-Medewerker bestaat niet in de database.");
+            }
+            return hrMedewerker;
     }
 }
 

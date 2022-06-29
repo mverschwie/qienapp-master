@@ -22,21 +22,11 @@ public class LeidinggevendeService {
         return leidinggevendeRepository.save(leidinggevende);
     }
 
-    public Leidinggevende haalLeidinggevendeBijId(long leidinggevendeId) {
-        if (leidinggevendeRepository.existsById(leidinggevendeId)) {
-            return leidinggevendeRepository.findById(leidinggevendeId).get();
+    public Leidinggevende haalLeidinggevendeBijId(long id) {
+        if (leidinggevendeRepository.existsById(id)) {
+            return leidinggevendeRepository.findById(id).get();
         }
         return null;
-}
+    }
 
-//        public void koppelLeidinggevendeAanTrainee(long leidinggevendeId, long traineeId) {
-//        Leidinggevende leidinggevende = haalLeidinggevendeBijId(leidinggevendeId);
-//        Trainee trainee = traineeService.haalTraineeBijId(traineeId);
-//        leidinggevende.addTrainee(trainee);
-//        trainee.addLeidinggevende(leidinggevende);
-//        leidinggevendeRepository.save(leidinggevende);
-//
-//        System.out.println("Trainee gekoppeld aan leidinggevende.");
-//
-//    }
 }

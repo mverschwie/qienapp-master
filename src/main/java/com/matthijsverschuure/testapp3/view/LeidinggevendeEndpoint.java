@@ -21,7 +21,7 @@ public class LeidinggevendeEndpoint {
     }
 
     @GetMapping("/{id}")
-    public Leidinggevende haalLeidinggevendeBijID(@PathVariable(value = "leidinggevendeId") long id) {
+    public Leidinggevende haalLeidinggevendeBijID(@PathVariable(value = "id") long id) {
         Leidinggevende leidinggevende = leidinggevendeService.haalLeidinggevendeBijId(id);
         if (leidinggevende == null) {
             throw new NoSuchElementException("Leidinggevende bestaat niet in de database.");

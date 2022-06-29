@@ -23,6 +23,8 @@ public class User {
     private String postcode;
     private String woonplaats;
 
+    private long telefoonnummer;
+
     public String getStraatEnHuisnummer() {
         return straatEnHuisnummer;
     }
@@ -69,6 +71,14 @@ public class User {
 
     public void setAchternaam(String achternaam) {
         this.achternaam = achternaam;
+    }
+
+    public long getTelefoonnummer() {
+        return telefoonnummer;
+    }
+
+    public void setTelefoonnummer(long telefoonnummer) {
+        this.telefoonnummer = telefoonnummer;
     }
 
 }
