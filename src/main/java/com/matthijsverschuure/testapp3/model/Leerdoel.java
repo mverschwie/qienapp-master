@@ -22,12 +22,10 @@ public class Leerdoel {
 
     private String soort;
 
+    private String feedback;
+
     @ManyToOne
     @JoinColumn(name = "certificaatId")
-//    public List<Certificaat> certificaten = new ArrayList<>();
-//    public void addCertificaat(Certificaat c){
-//        this.certificaten.add(c);
-//    }
 
     private Certificaat certificaat;
 
@@ -79,6 +77,15 @@ public class Leerdoel {
         this.soort = soort;
     }
 
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
+    }
+
+
 //    public enum Soort {
 //        HARDSKILL, SOFTSKILL
 //    }
@@ -90,6 +97,5 @@ public class Leerdoel {
     public void addTrainee(Trainee t){
         this.trainees.add(t);
     }
-
 
 }

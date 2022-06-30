@@ -21,7 +21,7 @@ public class Certificaat {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public long id;
 
-    private String omschrijving;
+    public String omschrijving;
 
     public String getCertificaatUpload() {
         return omschrijving;

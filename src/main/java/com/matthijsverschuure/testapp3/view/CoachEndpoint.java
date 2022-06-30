@@ -32,7 +32,7 @@ public class CoachEndpoint {
         return coach;
     }
 
-    @PostMapping("/{coachId}/{traineeId}")
+    @PostMapping("/{coachId}/trainee/{traineeId}")
     public void koppelCoachAanTrainee(@PathVariable(value = "coachId") long coachId, @PathVariable(value = "traineeId") long traineeId) {
         coachService.koppelCoachAanTrainee(coachId, traineeId);
     }
